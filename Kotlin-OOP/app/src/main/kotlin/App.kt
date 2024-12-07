@@ -30,6 +30,11 @@ class Animal() {
 
 }
 
+lateinit var name: String
+val myName: String by lazy{
+    "Fikri Aqsha"
+}
+
 fun main() {
     val animal = Animal()
 
@@ -39,4 +44,9 @@ fun main() {
 
     animal.eat()
     animal.sleep()
+
+//    lateinit and lazy
+    name = "Fikri"
+    println(name)
+    println(myName)
 }
