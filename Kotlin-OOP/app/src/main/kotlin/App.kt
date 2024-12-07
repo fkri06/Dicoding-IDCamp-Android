@@ -54,9 +54,42 @@ val myName: String by lazy{
     "Fikri Aqsha"
 }
 
+class Car(var brand: String, var model: String, var stock: Int, var color: String = "Blue") {
+    fun info() {
+        println("Brand Name: ${this.brand}")
+        println("Brand Model: $model")
+        println("Brand Stock: $stock")
+        println("Brand Color: $color")
+    }
+}
+
+class Airplane(companyName:String, model: String, price: Double) {
+    val companyName: String
+    val model: String
+    val price: Double
+
+    init {
+        this.companyName = companyName
+        this.model = model
+        this.price = if (price < 0) 0.0 else price
+    }
+
+    fun info() {
+        println("Company Name: ${this.companyName}")
+        println("Model: ${this.model}")
+        println("Price: ${this.price}")
+    }
+}
+
 fun main() {
     val animal = Animal()
     val tiger = BigCats()
+
+    val toyota = Car("Toyota", "467", 75)
+    val boeing = Airplane("Boeing", "356", 25.5)
+
+    toyota.info()
+    boeing.info()
 
     tiger.nameOfSpecies = "Sumatran Tiger"
     tiger.colorOfSpecies = "Orange and Brown strips"
