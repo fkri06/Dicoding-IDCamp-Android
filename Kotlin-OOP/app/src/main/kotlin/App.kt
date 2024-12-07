@@ -25,4 +25,10 @@ class Animal() {
 }
 
 fun main() {
+    val animal = Animal()
+
+    println(animal.name)
+
+    animal.eat()
+    animal.sleep()
 }
