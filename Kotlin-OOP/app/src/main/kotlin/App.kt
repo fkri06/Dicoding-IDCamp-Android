@@ -8,6 +8,12 @@ import org.dicoding.kotlin.utils.Printer
 class Animal() {
 //   Attributes/Properties of a class
     var name: String = "Kucing"
+        get() {
+            return field
+        }
+        set(value: String) {
+            field = value
+        }
     var weight: Double = 2.4
     var age: Int = 2
     var isMammal: Boolean = true
@@ -27,6 +33,8 @@ class Animal() {
 fun main() {
     val animal = Animal()
 
+    println(animal.name)
+    animal.name = "Dog"
     println(animal.name)
 
     animal.eat()
