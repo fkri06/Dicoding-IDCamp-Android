@@ -81,6 +81,23 @@ class Airplane(companyName:String, model: String, price: Double) {
     }
 }
 
+class AnotherAnimal(
+    private var name: String,
+    private var age: Int,
+    private var weight: Double,
+    private var isMammal: Boolean,
+) {
+
+    fun getName(): String {
+        return this.name
+    }
+
+    fun setName(name: String) {
+        this.name = name
+    }
+
+}
+
 fun main() {
     val animal = Animal()
     val tiger = BigCats()
@@ -90,6 +107,14 @@ fun main() {
 
     toyota.info()
     boeing.info()
+
+    println("Access Modifier")
+    val anotherAnimal: AnotherAnimal = AnotherAnimal("Timmy", 2, 2.5, true)
+    println(anotherAnimal.getName())
+    println(anotherAnimal)
+    anotherAnimal.setName("Rommy")
+    println(anotherAnimal.getName())
+    println(anotherAnimal)
 
     tiger.nameOfSpecies = "Sumatran Tiger"
     tiger.colorOfSpecies = "Orange and Brown strips"
