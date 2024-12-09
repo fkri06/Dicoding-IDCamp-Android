@@ -98,9 +98,35 @@ class AnotherAnimal(
 
 }
 
+class AnimalPolymorphism(private var name: String) {
+    fun eat() {
+        println("$name eat")
+    }
+
+    fun eat(typeOffood: String) {
+        println("$name eat $typeOffood")
+    }
+
+    fun eat(typeOffood: String, quantity: Int) {
+        println("$name eat $quantity quantity of $typeOffood")
+    }
+
+    fun sleep() {
+        println("$name sleep")
+    }
+}
+
+
 fun main() {
     val animal = Animal()
     val tiger = BigCats()
+
+    println("Function overloading to achieve polymorphism")
+    val croc: AnimalPolymorphism = AnimalPolymorphism("Kevin the Crocs")
+    croc.eat()
+    croc.eat("Meat")
+    croc.eat("Deer meat", 1)
+    println()
 
     val toyota = Car("Toyota", "467", 75)
     val boeing = Airplane("Boeing", "356", 25.5)
