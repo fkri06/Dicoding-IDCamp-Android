@@ -2,6 +2,8 @@ package org.dicoding.kotlin.app
 
 import org.dicoding.kotlin.utils.Printer
 import org.dicoding.kotlin.app.DelegateName
+import org.dicoding.kotlin.app.*
+
 
 // This is the main entry point of the application.
 // It uses the `Printer` class from the `:utils` subproject.
@@ -116,7 +118,6 @@ class AnimalPolymorphism(private var name: String) {
     }
 }
 
-
 fun main() {
     val animal = Animal()
     val tiger = BigCats()
@@ -161,4 +162,11 @@ fun main() {
     name = "Fikri"
     println(name)
     println(myName)
+
+    println("Inheritances")
+    var cat: Cat = Cat("Larry", "Orange", 2.5, 3, 4, true)
+    cat.eat()
+
+    var dog: Dog = Dog("Jack", 2.4, 4, true)
+    dog.eat()
 }
